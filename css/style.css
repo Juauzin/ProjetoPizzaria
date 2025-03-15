@@ -1,0 +1,262 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1c1249, #efefef);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(135deg, #ebebed, #020203);
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 12px;
+    width: 400px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.search-bar button {
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #112270, #0e0c10);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+main {
+    display: flex;
+    padding: 30px;
+    flex: 1;
+}
+
+.filters {
+    width: 250px;
+    margin-right: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.filters ul {
+    list-style: none;
+    padding: 0;
+}
+
+.filters li {
+    margin-bottom: 15px;
+}
+
+.filters a {
+    text-decoration: none;
+    color: #233482;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.filters a:hover {
+    color: #764ba2;
+}
+
+#cardapio {
+    flex: 1;
+}
+
+.pizza-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.pizza-grid .pizza {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pizza-grid .pizza:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.pizza-grid .pizza img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.pizza-grid .pizza h3 {
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.pizza-grid .pizza p {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.preco {
+    font-weight: 600;
+    color: #ff6633;
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+
+#carrinho {
+    margin: 30px auto;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    min-height: 400px;
+}
+
+#carrinho h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+#lista-carrinho {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-carrinho li {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+#total {
+    font-size: 1.3em;
+    margin-top: 25px;
+}
+
+#finalizar {
+    font-size: 1.2em;
+    padding: 15px 30px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 1200px) {
+    .pizza-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+    }
+    .filters {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .pizza-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #carrinho {
+        width: 90%;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pizza-grid {
+        grid-template-columns: 1fr;
+    }
+    .search-bar input[type="text"] {
+        width: 100%;
+    }
+    .search-bar button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .search-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+    #carrinho {
+        width: 95%;
+        padding: 20px;
+    }
+}
+
+/* From Uiverse.io by adamgiebl */
+button {
+    font-family: inherit;
+    font-size: 20px;
+    background: royalblue;
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+button span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+}
+
+button svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+    transform: translateX(5em);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+    from {
+        transform: translateY(0.1em);
+    }
+    to {
+        transform: translateY(-0.1em);
+    }
+}
