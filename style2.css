@@ -1,0 +1,86 @@
+
+/* Estilos CSS básicos para simular a aparência da imagem */
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #008000, #FFFFFF, #D2232C);
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.dados-pessoais, .resumo-pedido, .pagamento {
+    flex: 1;
+    padding: 20px;
+}
+
+.dados-pessoais {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.resumo-pedido {
+    background: linear-gradient(to right, #86eb86, #FFFFFF, #e87d83);
+    border-radius: 10px;
+}
+
+.pagamento {
+    background-color: #f0f8ff;
+    border-radius: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background: linear-gradient(to right, #008000, #FFFFFF, #D2232C);
+    color: #000000;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Dancing Script', cursive; font-size: 100%;
+}
+
+.pagamento-opcao {
+    background: linear-gradient(to right, #008000, #FFFFFF, #D2232C);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.desconto {
+    background-color: #ffeb3b;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.8em;
+}
+.entrega-opcao {
+    background-color: #d8e9f7;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
